@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "title": "Console로 문자열 입력받기",
+  "level": "easy",
+  "shortDescription": "Console.readLine()을 사용해 이름을 입력받고 출력하세요.",
+  "description": "[목표]\n- Console.readLine()과 Console.println()을 사용해\n  사용자의 이름을 입력받고, \"Hello, {이름}!\"을 출력하세요.\n\n[요구사항]\n- Scanner를 사용하지 마세요.\n- System.out.println 대신 Console.println을 사용하세요.",
+  "initialCode": "import io.github.dongnyoung.Console;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // TODO: 여기에 코드를 작성하세요.\n    }\n}"
+}

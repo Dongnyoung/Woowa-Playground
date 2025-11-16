@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "title": "Randoms로 숫자 뽑기",
+  "level": "easy",
+  "shortDescription": "Randoms.pickNumberInRange()를 사용해 1~9 사이 숫자를 출력하세요.",
+  "description": "[목표]\n- Randoms.pickNumberInRange(1, 9)를 사용해 1~9 사이 정수를 출력하세요.\n\n[요구사항]\n- ThreadLocalRandom, Math.random() 등을 사용하지 마세요.\n- Randoms 활용이 필수입니다.",
+  "initialCode": "import io.github.dongnyoung.Console;\nimport io.github.dongnyoung.Randoms;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // TODO: 여기에 코드를 작성하세요.\n    }\n}"
+}
