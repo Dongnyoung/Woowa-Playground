@@ -11,6 +11,29 @@ export default function Docs() {
           콘솔 기반 미션을 편하게 만들기 위해 기존의 라이브러리에 확장하여 만든 유틸리티 라이브러리입니다.
         </p>
 
+        {/* GitHub 링크 안내 섹션 추가 */}
+        <section className="docs-section">
+          <p style={{ 
+            backgroundColor: "#0b1120",
+            padding: "12px 14px",
+            borderRadius: "8px",
+            border: "1px solid #1f2937",
+            fontSize: "14px",
+            lineHeight: "1.5"
+          }}>
+            더 자세한 설명과 예제는 아래의 문서를 참고하세요.<br />
+            <a 
+              href="https://github.com/Dongnyoung/woowa-mission-utils/blob/0.1.0/README.md"
+              target="_blank"
+              rel="noreferrer"
+              style={{ color: "#38bdf8", textDecoration: "underline" }}
+            >
+              Dongnyoung GitHub 공식 README 문서.
+            </a>
+            
+          </p>
+        </section>
+
         <section className="docs-section">
           <h2>설치</h2>
           <pre className="code-block">
