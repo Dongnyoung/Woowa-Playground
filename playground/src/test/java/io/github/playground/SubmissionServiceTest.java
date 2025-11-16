@@ -13,7 +13,7 @@ public class SubmissionServiceTest {
     @Test
     void 문제1_Console을_사용하면_PASS() {
         String code = """
-                import camp.woowa.Console;
+                import io.github.dongnyoung.Console;;
 
                 public class Solution {
                     public static void main(String[] args) {
@@ -54,8 +54,8 @@ public class SubmissionServiceTest {
     @Test
     void 문제2_Randoms_사용하면_PASS() {
         String code = """
-                import camp.woowa.Console;
-                import camp.woowa.Randoms;
+                import io.github.dongnyoung.Console;
+                import io.github.dongnyoung.Randoms;
 
                 public class Solution {
                     public static void main(String[] args) {
@@ -91,8 +91,8 @@ public class SubmissionServiceTest {
     @Test
     void 문제3_Inputs_사용하면_PASS() {
         String code = """
-                import camp.woowa.Console;
-                import camp.woowa.Inputs;
+                import io.github.dongnyoung.Console;
+                import io.github.dongnyoung.Inputs;
 
                 public class Solution {
                     public static void main(String[] args) {
