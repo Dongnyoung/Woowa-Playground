@@ -19,7 +19,7 @@ export default function Docs() {
 }
 
 dependencies {
-    implementation "io.github.dongnyoung:woowa-mission-utils:0.1.0"
+    implementation "io.github.dongnyoung:woowa-mission-utils:0.1.0-SNAPSHOT"
 }`}
           </pre>
         </section>
