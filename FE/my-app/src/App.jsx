@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import ProblemList from "./pages/ProblemList.jsx";
 import ProblemDetail from "./pages/ProblemDetail.jsx";
 import Docs from  "./pages/Docs.jsx";
+import DocsConsole from "./pages/DocsConsole.jsx";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/problems" element={<ProblemList />} />
           <Route path="/problems/:problemId" element={<ProblemDetail />} />
           <Route path="/docs" element={<Docs />} />
+          <Route path="/docs/console" element={<DocsConsole />} />
         </Routes>
       </main>
     </div>
