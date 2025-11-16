@@ -2,40 +2,48 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// 나중에 백엔드 연동 전에 임시로 쓰는 목업 데이터
-const MOCK_PROBLEMS = [
-  {
-    id: 1,
-    title: "Console로 문자열 입력받기",
-    level: "easy",
-    shortDescription: "Console.readLine()을 사용해 이름을 입력받고 출력하세요.",
-  },
-  {
-    id: 2,
-    title: "Randoms로 숫자 뽑기",
-    level: "easy",
-    shortDescription: "Randoms.pickNumberInRange()를 사용해 1~9 사이 숫자를 출력하세요.",
-  },
-  {
-    id: 3,
-    title: "Inputs로 양수만 입력받기",
-    level: "medium",
-    shortDescription: "0 이하 숫자는 에러가 나도록 처리해 보세요.",
-  },
-];
-
 export default function ProblemList() {
   const [problems, setProblems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // TODO: 나중에는 여기서 백엔드 호출
-    // fetch("/api/problems")
-    //   .then(res => res.json())
-    //   .then(setProblems)
-    //   .catch(console.error);
+    async function load() {
+      try {
+        const res = await fetch("/api/problems");
+        if (!res.ok) {
+          throw new Error("문제 목록을 불러오지 못했습니다.");
+        }
+        const data = await res.json();
+        setProblems(data);
+      } catch (e) {
+        console.error(e);
+        setError(e.message);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-    setProblems(MOCK_PROBLEMS);
+    load();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="page">
+        <h1>문제 목록</h1>
+        <p className="subtitle">문제를 불러오는 중입니다...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="page">
+        <h1>문제 목록</h1>
+        <p className="subtitle">에러: {error}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="page">
@@ -53,11 +61,15 @@ export default function ProblemList() {
           >
             <div className="problem-header">
               <h2>{problem.title}</h2>
-              <span className={`badge badge-${problem.level}`}>
-                {problem.level}
-              </span>
+              {problem.level && (
+                <span className={`badge badge-${problem.level}`}>
+                  {problem.level}
+                </span>
+              )}
             </div>
-            <p className="problem-desc">{problem.shortDescription}</p>
+            {problem.shortDescription && (
+              <p className="problem-desc">{problem.shortDescription}</p>
+            )}
           </Link>
         ))}
       </div>
