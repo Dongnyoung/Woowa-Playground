@@ -1,5 +1,6 @@
 // src/App.jsx
 import { Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home.jsx";
 
 
 export default function App() {
@@ -19,8 +20,6 @@ export default function App() {
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/problems" element={<ProblemList />} />
-          <Route path="/problems/:problemId" element={<ProblemDetail />} />
         </Routes>
       </main>
     </div>
