@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ProblemList from "./pages/ProblemList.jsx";
 import ProblemDetail from "./pages/ProblemDetail.jsx";
+import Docs from  "./pages/Docs.jsx";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         </Link>
         <nav className="nav-links">
           <Link to="/problems">Problems</Link>
+          <Link to="/docs">Docs</Link>  {/* ← 추가 */}
         </nav>
       </header>
 
@@ -23,6 +25,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/problems" element={<ProblemList />} />
           <Route path="/problems/:problemId" element={<ProblemDetail />} />
+          <Route path="/docs" element={<Docs />} />
         </Routes>
       </main>
     </div>
