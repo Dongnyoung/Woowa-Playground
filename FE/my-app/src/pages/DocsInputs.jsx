@@ -1,4 +1,3 @@
-// src/pages/DocsInputs.jsx
 import DocsNav from "./DocsNav.jsx";
 
 export default function DocsInputs() {
@@ -12,10 +11,10 @@ export default function DocsInputs() {
         </p>
 
         <section className="docs-section">
-          <h2>예시: 양수 정수 입력받기</h2>
+          <h2>문구 출력과 동시에 양수 정수 입력받기</h2>
           <pre className="code-block">
-{`import camp.woowa.Inputs;
-import camp.woowa.Console;
+{`import io.github.dongnyoung.missionutils.Inputs;
+import io.github.dongyoung.missionutils.Console;
 
 public class Example {
     public static void main(String[] args) {

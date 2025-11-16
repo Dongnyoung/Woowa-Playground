@@ -223,9 +223,8 @@ body {
   background-color: #0b1120;
 }
 
-/*(선택) Docs 내용 래퍼 */
+/*Docs 내용 래퍼 */
 .docs-content {
-  /* app-main 안쪽에서 쓰고 싶으면 그대로 사용 */
   max-width: 900px;
 }
 

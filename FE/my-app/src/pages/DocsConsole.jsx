@@ -1,4 +1,3 @@
-// src/pages/DocsConsole.jsx
 import DocsNav from "./DocsNav.jsx";
 
 export default function DocsConsole() {
@@ -14,7 +13,7 @@ export default function DocsConsole() {
         <section className="docs-section">
           <h2>기본 사용법</h2>
           <pre className="code-block">
-{`import camp.woowa.Console;
+{`import io.github.dongnyoung.missionutils.Console;
 
 public class Example {
     public static void main(String[] args) {

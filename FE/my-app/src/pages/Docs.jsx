@@ -1,4 +1,3 @@
-// src/pages/Docs.jsx
 import { Link } from "react-router-dom";
 import DocsNav from "./DocsNav.jsx";
 

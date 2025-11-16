@@ -6,8 +6,11 @@ import ProblemDetail from "./pages/ProblemDetail.jsx";
 import Docs from "./pages/Docs.jsx";
 import DocsConsole from "./pages/DocsConsole.jsx";
 import DocsInputs from "./pages/DocsInputs.jsx";
-import DocsNav from "./pages/DocsNav.jsx";  // ← 추가
-
+import DocsNav from "./pages/DocsNav.jsx"; 
+import DocsRandoms from "./pages/DocsRandoms.jsx";
+import DocsStrings from "./pages/DocsStrings.jsx";
+import DocsDateTimes from "./pages/DocsDateTimes.jsx";
+import DocsBanners from "./pages/DocsBanners.jsx";
 export default function App() {
   const location = useLocation();
   const isDocsPage = location.pathname.startsWith("/docs");
@@ -44,6 +47,11 @@ export default function App() {
             <Route path="/docs" element={<Docs />} />
             <Route path="/docs/console" element={<DocsConsole />} />
             <Route path="/docs/inputs" element={<DocsInputs />} />
+            <Route path="/docs/randoms" element={<DocsRandoms />} />
+            <Route path="/docs/strings" element={<DocsStrings />} />
+            <Route path="/docs/datetimes" element={<DocsDateTimes />} />
+            <Route path="/docs/banners" element={<DocsBanners />} />
+
           </Routes>
         </main>
       </div>
