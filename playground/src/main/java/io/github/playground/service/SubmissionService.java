@@ -72,7 +72,7 @@ public class SubmissionService {
         boolean usesConsoleOnly = contains(source, "Console.readLine");
 
         if (!usesInputs) {
-            return new SubmissionResponse("FAIL", "camp.woowa.Inputs 유틸을 활용해서 구현해 보세요.");
+            return new SubmissionResponse("FAIL", "io.github.dongnyoung.Inputs 유틸을 활용해서 구현해 보세요.");
         }
         // 그냥 Console.readLine으로만 직접 파싱하는 경우를 막고 싶다면
         if (usesConsoleOnly && !usesInputs) {
