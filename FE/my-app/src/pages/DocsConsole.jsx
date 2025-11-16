@@ -4,7 +4,6 @@ import DocsNav from "./DocsNav.jsx";
 export default function DocsConsole() {
   return (
     <div className="page docs-layout">
-      <DocsNav />
 
       <div className="docs-content">
         <h1>Console</h1>

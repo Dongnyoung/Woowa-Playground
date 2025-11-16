@@ -5,12 +5,11 @@ import DocsNav from "./DocsNav.jsx";
 export default function Docs() {
   return (
     <div className="page docs-layout">
-      <DocsNav />
 
       <div className="docs-content">
         <h1>woowa-mission-utils 문서</h1>
         <p className="subtitle">
-          콘솔 기반 미션을 편하게 만들기 위한 유틸리티 라이브러리입니다.
+          콘솔 기반 미션을 편하게 만들기 위해 기존의 라이브러리에 확장하여 만든 유틸리티 라이브러리입니다.
         </p>
 
         <section className="docs-section">

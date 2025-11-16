@@ -40,11 +40,21 @@ body {
   color: #e5e7eb;
 }
 
+/* 🔹 본문 전체 레이아웃: 사이드바 + 내용 */
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;          /* 전체를 가운데 정렬 */
+}
+
+/* 🔹 오른쪽 메인(문제/Docs 내용) 영역 */
 .app-main {
   flex: 1;
   padding: 24px;
   max-width: 960px;
-  margin: 0 auto;
+  /* 기존 margin: 0 auto; 제거! */
 }
 
 .page h1 {
@@ -171,20 +181,22 @@ body {
   background-color: #f9731633;
   border: 1px solid #f97316;
 }
-.docs-layout {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 20px;
-}
 
-.docs-nav {
-  padding: 12px;
-  border-radius: 10px;
+
+
+/* 왼쪽 사이드바 (DocsNav를 감싸는 aside) */
+.docs-sidebar {
+  width: 220px;
+  padding: 16px 12px;
+  position: sticky;
+  top: 72px;                    /* 헤더 높이에 맞춰 조절 */
+  align-self: flex-start;
   background-color: #020617;
-  border: 1px solid #1f2937;
-  height: fit-content;
+  border-right: 1px solid #1f2937;
+  flex-shrink: 0;
 }
 
+/* Nav 자체 스타일 */
 .docs-nav-title {
   margin-top: 0;
   margin-bottom: 8px;
@@ -211,10 +223,13 @@ body {
   background-color: #0b1120;
 }
 
+/*(선택) Docs 내용 래퍼 */
 .docs-content {
-  min-width: 0;
+  /* app-main 안쪽에서 쓰고 싶으면 그대로 사용 */
+  max-width: 900px;
 }
 
+/* 코드 블럭 스타일 */
 .code-block {
   background-color: #020617;
   border-radius: 10px;
