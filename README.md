@@ -89,7 +89,7 @@ npm start
 
 브라우저에서
 ```bash
-http://localhost:8081
+http://localhost:5173
 ```
 
 ### 2) 백엔드 실행
