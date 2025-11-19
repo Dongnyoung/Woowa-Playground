@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "title": "Banners를 이용하여 설명 출력하기",
+  "level": "easy",
+  "shortDescription": "반복되는 System.out.println 대신 Banners를 이용하여 깔끔하게 출력해 보세요!",
+  "description": "Banners를 이용하여 게임 시작, 게임 정보, 게임 결과, 게임 종료 문구를 출력하는 간단한 문제입니다.\n\n### 요구사항\n- `Banners.opening().print()`\n- `Banners.info().print()`\n- `Banners.result().print()`\n- `Banners.closing().print()`\n\n위 메서드들을 모두 호출하여 출력해 보세요!",
+  "initialCode": "import io.github.dongnyoung.missionutils.Banners;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // TODO: Banners.메소드().print() 를 이용하여 출력하세요!\n    }\n}\n"
+}

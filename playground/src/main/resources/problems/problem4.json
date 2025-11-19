@@ -1,0 +1,8 @@
+{
+  "id": 4,
+  "title": "Strings로 숫자 변환 연습하기",
+  "level": "easy",
+  "shortDescription": "문자열로 입력된 숫자를 Strings 유틸로 변환하고 다시 문자열로 출력해 보세요.",
+  "description": "문자열로 입력된 정수를 Strings 유틸을 사용해서 정수로 변환하고, 1을 더한 값을 다시 문자열로 바꾸어 출력하는 간단한 연습 문제입니다.\n\n### 요구사항\n1. `Inputs.readRequired()`를 사용해서 정수를 문자열 형태로 한 줄 입력받습니다. 예) \"10\"\n2. 입력받은 문자열을 `Strings.stringToInt(input)`을 사용하여 `int`로 변환합니다.\n3. 변환된 정수 값에 1을 더합니다.\n4. 결과 값을 `Strings.valueOf(result)`를 사용해 문자열로 변환합니다.\n5. 최종 문자열을 `Console.println()`으로 한 줄 출력합니다.\n\n※ 이 문제에서는 반드시 `Strings.stringToInt`와 `Strings.valueOf`를 사용해야 하며, `Integer.parseInt`나 `String.valueOf`를 직접 사용하지 않습니다.\n\n### 예시\n입력:\n- `10`\n\n출력:\n```  \n11\n```",
+  "initialCode": "import io.github.dongnyoung.missionutils.Strings;\nimport io.github.dongnyoung.missionutils.Console;\nimport io.github.dongnyoung.missionutils.Inputs;\n\npublic class Solution {\n    public static void main(String[] args) {\n        String input = Inputs.readRequired(\"정수를 입력하세요: \");\n\n        // TODO: Strings.stringToInt(input) 으로 정수 변환\n        // TODO: 값에 1을 더한 후 Strings.valueOf(...)로 문자열로 변환\n        // TODO: Console.println()으로 결과 출력\n    }\n}\n"
+}

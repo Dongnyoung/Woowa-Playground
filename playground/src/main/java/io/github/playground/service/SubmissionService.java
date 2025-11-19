@@ -25,6 +25,8 @@ public class SubmissionService {
             case 1 -> evaluateProblem1(source);
             case 2 -> evaluateProblem2(source);
             case 3 -> evaluateProblem3(source);
+            case 4 -> evaluateProblem4(source);
+            case 5 -> evaluateProblem5(source);
             default -> new SubmissionResponse("ERROR", "지원하지 않는 문제 ID입니다: " + problemId);
         };
     }
@@ -80,6 +82,73 @@ public class SubmissionService {
         }
         return new SubmissionResponse("PASS", "형식 검사를 통과했습니다. (로직 검증은 추후 확장 예정)");
     }
+    // 4번 문제: Strings.stringToInt + Strings.valueOf 사용 검사
+    private SubmissionResponse evaluateProblem4(String source) {
+        boolean usesStringToInt = contains(source, "Strings.stringToInt");
+        boolean usesValueOf = contains(source, "Strings.valueOf");
+        boolean usesParseInt = contains(source, "Integer.parseInt");
+        boolean usesStringValueOf = contains(source, "String.valueOf");
+
+        // 1) stringToInt 필수
+        if (!usesStringToInt) {
+            return new SubmissionResponse("FAIL", "Strings.stringToInt를 사용해서 문자열을 정수로 변환해 보세요.");
+        }
+
+        // 2) valueOf 필수
+        if (!usesValueOf) {
+            return new SubmissionResponse("FAIL", "Strings.valueOf를 사용해서 정수를 다시 문자열로 변환해 보세요.");
+        }
+
+        // 3) 원래 API 직접 사용 금지
+        if (usesParseInt) {
+            return new SubmissionResponse("FAIL", "Integer.parseInt 대신 Strings.stringToInt를 사용해 보세요.");
+        }
+
+        if (usesStringValueOf) {
+            return new SubmissionResponse("FAIL", "String.valueOf 대신 Strings.valueOf를 사용해 보세요.");
+        }
+
+        return new SubmissionResponse("PASS", "형식 검사를 통과했습니다. (로직 검증은 추후 확장 예정)");
+    }
+
+    //5번문제 : Banners 사용
+    private SubmissionResponse evaluateProblem5(String source) {
+        boolean usesOpening = contains(source, "Banners.opening");
+        boolean usesInfo = contains(source, "Banners.info");
+        boolean usesResult = contains(source, "Banners.result");
+        boolean usesClosing = contains(source, "Banners.closing");
+
+        boolean usesPrintln = contains(source, "System.out.println");
+
+        // 1) opening() 필수
+        if (!usesOpening) {
+            return new SubmissionResponse("FAIL", "Banners.opening().print() 를 사용해 보세요.");
+        }
+
+        // 2) info() 필수
+        if (!usesInfo) {
+            return new SubmissionResponse("FAIL", "Banners.info().print() 를 사용해 보세요.");
+        }
+
+        // 3) result() 필수
+        if (!usesResult) {
+            return new SubmissionResponse("FAIL", "Banners.result().print() 를 사용해 보세요.");
+        }
+
+        // 4) closing() 필수
+        if (!usesClosing) {
+            return new SubmissionResponse("FAIL", "Banners.closing().print() 를 사용해 보세요.");
+        }
+
+        // 5) println 금지
+        if (usesPrintln) {
+            return new SubmissionResponse("FAIL", "System.out.println 대신 Banners.*().print() 를 사용해 보세요!");
+        }
+
+        return new SubmissionResponse("PASS", "형식 검사를 통과했습니다. (로직 검증은 추후 확장 예정)");
+    }
+
+
 
     private boolean contains(String source, String keyword) {
         return source != null && source.contains(keyword);
