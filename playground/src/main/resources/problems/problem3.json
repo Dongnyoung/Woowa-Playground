@@ -3,6 +3,6 @@
   "title": "Inputs로 양수만 입력받기",
   "level": "medium",
   "shortDescription": "0 이하 숫자는 에러가 나도록 처리해 보세요.",
-  "description": "[목표]\n- 입력받은 정수가 1 이상인지 검사하고, 1 미만이면 예외를 던지는 프로그램을 작성하세요.\n\n[요구사항]\n- camp.woowa.Inputs를 활용해서 구현해 보세요.",
+  "description": "[목표]\n- 입력받은 정수가 1 이상인지 검사하고, 1 미만이면 예외를 던지는 프로그램을 작성하세요.\n\n[요구사항]\n- io.github.dongnyoung.Inputs를 활용해서 구현해 보세요.",
   "initialCode": "import io.github.dongnyoung.Console;\nimport io.github.dongnyoung.Inputs;\n\npublic class Solution {\n    public static void main(String[] args) {\n        // TODO: 여기에 코드를 작성하세요.\n    }\n}"
 }
