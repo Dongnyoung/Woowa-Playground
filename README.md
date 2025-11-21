@@ -55,20 +55,22 @@ Spring Boot 백엔드가 제출한 코드를 검사해 PASS/FAIL을 응답합니
 ## 기술 스택
 
 ### Frontend
-- **React**
+- **React + Vite**
 - React Router
-- Custom Code Editor (Textarea 기반)
-- Tailwind-like 커스텀 스타일링
+- Vite 개발 서버의 proxy 설정을 통해 백엔드 API로 요청 전달
 
 ### Backend
 - **Spring Boot 3**
 - REST API
 - JSON 기반 문제 관리
-- 제출 코드 static 검증
 
 ### Library
 - **woowa-mission-utils (기존 미션유틸 라이브러리에서 추가,확장하여 직접 개발)**  
   → 입력, 검증, 문자열 처리, 배너 출력, 랜덤 유틸 등 포함
+
+---
+## 시스템 아키텍처
+<img width="1114" height="475" alt="스크린샷 2025-11-21 오후 9 27 27" src="https://github.com/user-attachments/assets/0b220b90-56ad-4ede-9d24-d87a9d7860c8" />
 
 ---
 
