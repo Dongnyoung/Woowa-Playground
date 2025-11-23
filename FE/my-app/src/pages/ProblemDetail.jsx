@@ -1,6 +1,7 @@
 // src/pages/ProblemDetail.jsx
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Editor from "@monaco-editor/react";
 
 export default function ProblemDetail() {
   const { problemId } = useParams();
@@ -96,12 +97,22 @@ export default function ProblemDetail() {
 
       <section className="editor-section">
         <h2>코드 작성</h2>
-        <textarea
-          className="code-editor"
-          value={sourceCode}
-          onChange={(e) => setSourceCode(e.target.value)}
-          spellCheck={false}
-        />
+
+        <div className="code-editor-wrapper">
+          <Editor
+            height="400px"
+            language="java"
+            theme="vs-dark"
+            value={sourceCode}
+            onChange={(value) => setSourceCode(value ?? "")}
+            options={{
+              fontSize: 14,
+              minimap: { enabled: false },
+              scrollBeyondLastLine: false,
+              automaticLayout: true,
+            }}
+          />
+        </div>
 
         <button
           className="primary-button"
