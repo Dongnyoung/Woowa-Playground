@@ -42,20 +42,26 @@
 - 문제 설명  
 - 요구사항  
 - 초기 템플릿 코드 제공
-<img width="1258" height="795" alt="스크린샷 2025-11-23 190258" src="https://github.com/user-attachments/assets/3d0bbe96-5002-455c-8bb5-1dfde9cf5436" />
+<img width="1260" height="924" alt="image" src="https://github.com/user-attachments/assets/09fd6a4c-d31f-4bb8-a5a6-799b7ac57e88" />
+
 
 ### 코드 에디터
-브라우저에서 Java 코드를 작성할 수 있습니다.
+Monaco에디터를 이용하였습니다.
+~~~bash
+npm install @monaco-editor/react
+~~~
 
 ### 제출 및 판정
 Spring Boot 백엔드가 제출한 코드를 검사해 PASS/FAIL을 응답합니다.  
 *(현재는 문자열/규칙 검사 기반이며, 추후 실제 Java 실행 환경 추가 가능)*
 
 #### 실패
-<img width="1030" height="527" alt="스크린샷 2025-11-23 190409" src="https://github.com/user-attachments/assets/23c5e448-71b2-4808-a5c9-42067236bdbe" />
+<img width="1066" height="676" alt="image" src="https://github.com/user-attachments/assets/8b6b399a-7452-46e6-b487-9d611a3719c0" />
+
 
 #### 성공
-<img width="1065" height="521" alt="스크린샷 2025-11-23 190356" src="https://github.com/user-attachments/assets/78ef689b-f2d9-485c-a2de-1a1407899839" />
+<img width="1019" height="659" alt="image" src="https://github.com/user-attachments/assets/96e35b0e-cd44-47d7-980f-4973f11ce598" />
+
 
 
 ### 문서(Documentation)
